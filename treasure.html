@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+    #clicks{
+      background-color:chartreuse;
+    }
+    #distance{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<h1>Find the treasure by priyanka thambabathula</h1>
+<p>Click on the squares to find the treasure</p>
+<p id="clicks">Number of clicks is zero</p>
+<p id="distance">Distance is unknown</p>
+<div class="container">
+    <div class="row">
+     <div class="row">
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image0" onClick="makeGuess(0)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image1" onClick="makeGuess(1)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image2" onClick="makeGuess(2)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image3" onClick="makeGuess(3)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image4" onClick="makeGuess(4)" class="img-fluid" alt="book" width="200" height ="200"></div>
+          </div><br>
+          <div class="row">
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image5" onClick="makeGuess(5)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image6" onClick="makeGuess(6)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image7" onClick="makeGuess(7)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image8" onClick="makeGuess(8)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image9" onClick="makeGuess(9)" class="img-fluid" alt="book" width="200" height ="200"></div>
+          </div><br>
+          <div class="row">
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image10" onClick="makeGuess(10)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image11" onClick="makeGuess(11)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image12" onClick="makeGuess(12)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image13" onClick="makeGuess(13)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image14" onClick="makeGuess(14)" class="img-fluid" alt="book" width="200" height ="200"></div>
+          </div><br>
+          <div class="row">
+            <div class="col-sm-2 " ><img src="dustybook.jpg" id="image15" onClick="makeGuess(15)" class="img-fluid" alt="book" width="200" height ="200"></div>
+            <div class="col-sm-2 " ><img src="dustybook.jpg" id="image16" onClick="makeGuess(16)" class="img-fluid" alt="book" width="200" height ="200"></div>
+            <div class="col-sm-2 " ><img src="dustybook.jpg" id="image17" onClick="makeGuess(17)" class="img-fluid" alt="book" width="200" height ="200"></div>
+            <div class="col-sm-2 " ><img src="dustybook.jpg" id="image18" onClick="makeGuess(18)" class="img-fluid" alt="book" width="200" height ="200"></div>
+            <div class="col-sm-2 " ><img src="dustybook.jpg" id="image19" onClick="makeGuess(19)" class="img-fluid" alt="book" width="200" height ="200"></div>
+        </div><br>
+        <div class="row">
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image20" onClick="makeGuess(20)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image21" onClick="makeGuess(21)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image22" onClick="makeGuess(22)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image23" onClick="makeGuess(23)" class="img-fluid" alt="book" width="200" height ="200"></div>
+              <div class="col-sm-2 " ><img src="dustybook.jpg" id="image24" onClick="makeGuess(24)" class="img-fluid" alt="book" width="200" height ="200"></div>
+          </div>
+          <br>
+          <script>
+            var ids = ["image0", "image1", "image2", "image3", "image4", "image5", "image6", "image7",
+                       "image8", "image9", "image10", "image11", "image12", "image13", "image14", "image15",
+                       "image16", "image17", "image18", "image19", "image20", "image21", "image22", "image23",
+                       "image24"];
+                       var clickCount = 0;
+         var treasureLocation = Math.floor((Math.random() * 24) + 0);
+    
+         function getRandomIntInclusive(min, max)
+            {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1) + min); 
+            }
+          
+         function newGame() {
+                var clickCount = 0;
+                var treasureLocation = getRandomIntInclusive(0, 24);
+                console.log(treasureLocation);
+                document.getElementById("clicks").innerHTML = "Number of clicks is " + clickCount + ".";
+    
+                document.getElementById("distance").innerHTML = "Distance is unknown.";
+            }
+    
+            
+    
+            function makeGuess(position){
+                id = ids[position];
+              imageElement = document.getElementById(id);
+    
+              if (position == treasureLocation) {
+                  imageElement.src = "jewelsbox.jpg"
+              }
+              else {
+                  imageElement.src = "emptybox.jpg"
+              }
+    
+              clickCount++;
+    
+              document.getElementById("clicks").innerHTML = "Number of clicks is " + clickCount + ".";
+    
+              document.getElementById("distance").innerHTML = "Distance is " + distance(position, treasureLocation) + ".";
+            }
+            function distance(pos1, pos2)
+            {
+                var hs = 
+                [
+                    [0, 1, 2, 3, 4],
+                    [5, 6, 7, 8, 9],
+                    [10, 11, 12, 13, 14],
+                    [15, 16, 17, 18, 19],
+                    [20, 21, 22, 23, 24]
+                ]
+                var x1 = 0,y1=0,x2=0,y2=0;
+                for(var i =0; i<5; i++)
+                {
+                for(var j =0; j<5; j++)
+                if(hs[i][j]==pos1)
+                {
+                    x1=i;
+                    y1=j;
+                    break;
+                }
+            }
+            for(var i =0;i<5;i++)
+            {
+                for(var j =0;j<5;j++)
+                
+                if(hs[i][j]==pos2)
+                {
+                    x2=i;
+                    y2=j;
+                    break;
+                }
+            }
+            
+            var dist = Math.abs(x2-x1) + Math.abs(y2-y1);
+            return dist;
+        }
+            
+    
+    
+        </script>
+</body>
+</html>
